@@ -22,8 +22,8 @@
 		<div class="in-center">
 			<ul><h2>Login </h2><br>
 				<form class="form" method="post" id="form1" name="form1" onsubmit="return validate()" action="index.html">
-					<input type="text" name="username" class="user"  placeholder="Username" required><br>	<br>
-					<input type="password" name="password"  class="pass" placeholder="Password" required><br><br>
+					<input type="text" name="username" class="user"  value="user" placeholder="Username" required><br>	<br>
+					<input type="password" name="password"  class="pass" value="pass" placeholder="Password" required><br><br>
 					<input type="submit" name="submit" id="submit" value="LogIn">
 				</form>
 			</ul>
@@ -34,8 +34,10 @@
 			function validate() {
 				
 				var inForm = document.form1;
-				var user =inForm.form1.user.value;
-				var pass =inForm.form1.pass.value;
+				var user =inForm.user.value;
+				var pass =inForm.pass.value;
+
+
 				if(user=="user"&&pass=="pass123")
 				{
 					alert("Welcome");
