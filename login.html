@@ -40,17 +40,23 @@
 				if(inForm.user=="user"&&inForm.pass=="pass123")
 				{
 					alert("Welcome");
-					return false;
+					return true;
 				}
 				else if(user!="user"&&pass!="pass123")
 				{
 					alert("Invalid credentials username: user password: pass123");
-					return true;
+					return false;
 
 				}
-				else
+				else if(inForm.user=="user"&&inForm.pass!="pass123")
 				{
-					return true;
+					alert("Invalid credentials username: user password: pass123");
+					return false;
+				}
+				else if(inForm.user!="user"&&inForm.pass=="pass123")
+				{
+					alert("Invalid credentials username: user password: pass123");
+					return false;
 				}
 
 			}
