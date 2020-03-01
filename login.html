@@ -33,16 +33,21 @@
 		<script>
 			function validate() {
 				
-				let inForm = document.form1;
-				let user =inForm.form1.user.value;
-				let pass =inForm.form1.pass.value;
+				var inForm = document.form1;
+				var user =inForm.form1.user.value;
+				var pass =inForm.form1.pass.value;
 				if(user=="user"&&pass=="pass123")
 				{
 					alert("Welcome");
 					
 					document.getElementById("form1");
 				}
-				if(user!="user"||pass!="pass123")
+				else if(user!="user"||pass!="pass123")
+				{
+					alert("Use user: user pass: pass123");
+					return false;
+				}
+				else
 				{
 					alert("Error");
 					return false;
