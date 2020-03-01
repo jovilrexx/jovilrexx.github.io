@@ -37,20 +37,20 @@
 				let inForm = document.from1;
 				let user =document.getElementById("user").value;
 				let pass =document.getElementById("pass").value;
-				if(user=="user"&&pass=="pass123")
+				if(inForm.user=="user"&&inForm.pass=="pass123")
 				{
 					alert("Welcome");
-					return true;
+					return false;
 				}
 				else if(user!="user"&&pass!="pass123")
 				{
 					alert("Invalid credentials username: user password: pass123");
-					return false;
+					return true;
 
 				}
 				else
 				{
-					return false;
+					return true;
 				}
 
 			}
