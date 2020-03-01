@@ -39,15 +39,18 @@
 				let pass =document.getElementById("pass").value;
 				if(user=="user"&&pass=="pass123")
 				{
-					alert("welcome");
-					window
+					alert("Welcome");
 					return true;
 				}
-				if(user!="user"&&pass!="pass123")
+				else if(user!="user"&&pass!="pass123")
 				{
 					alert("Invalid credentials username: user password: pass123");
 					return false;
 
+				}
+				else
+				{
+					return false;
 				}
 
 			}
