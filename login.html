@@ -21,10 +21,10 @@
 	<div class="container">
 		<div class="in-center">
 			<ul><h2>Login </h2><br>
-				<form class="form" action="index.html">
-					<input type="text" name="username"  placeholder="Username" required><br>	<br>
-					<input type="password" name="password"  placeholder="Password" required><br><br>
-					<input type="submit" name="submit" value="LogIn" onsubmit="index.html">
+				<form class="form" method="post" name="form1">
+					<input type="text" name="username" id="user"  placeholder="Username" required><br>	<br>
+					<input type="password" name="password"  id="pass" placeholder="Password" required><br><br>
+					<input type="submit" name="submit" id="submit" value="LogIn" onclick="return validate()">
 				</form>
 			</ul>
 		</div>
@@ -32,13 +32,18 @@
 
 </body>
 		<script>
-			/*function onAction() {
-					// body..
-				let a=document.getElementById("user");
-				let b=document.getElementById("pass");
-				let 
-				if()
-			}*/	
+			function validate() {
+					
+				var a=document.getElementById("user").value;
+				var b=document.getElementById("pass").value;
+
+
+				if(a=="melody" && b=="pass")
+				{
+					alert("nice");
+				}
+			
+			}
 
 		</script>
 </html>
