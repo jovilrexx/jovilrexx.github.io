@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="in-center">
 			<ul><h2>Login </h2><br>
-				<form class="form" method="post" name="form1" onsubmit="return validate()" action="index.html">
+				<form class="form" method="post" id="form1" name="form1" onsubmit="return validate()" action="index.html">
 					<input type="text" name="username" id="user"  placeholder="Username" required><br>	<br>
 					<input type="password" name="password"  id="pass" placeholder="Password" required><br><br>
 					<input type="submit" name="submit" id="submit" value="LogIn">
@@ -41,10 +41,11 @@
 				{
 					alert("Welcome");
 					
-					return true;
+					document.getElementById("form1");
 				}
 				if(user!="user"||pass!="pass123")
 				{
+					alert("Error");
 					return false;
 				}
 
