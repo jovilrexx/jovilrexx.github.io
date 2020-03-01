@@ -29,15 +29,32 @@ input
 	padding: 10px;
 	width:75%;
 	box-shadow: 10px 0 10px 0 ;
-	border-radius: 10px;
+	border-radius: 24px;
 	text-align: center;
+	border:0;
 
 }
 
 input[type=submit]{
-	border-style: outset
+	border-style: outset;
+	background-color: #ffff99;
+}
+input[type=submit]:hover{
+	background-color: #99ff66;
+	cursor:pointer;
 }
 
+input[type=text]:focus,input[type=password]:focus
+{
+	width: 280px;
+	border-color: #ccffff
+
+}
+input[type=text],input[type=password]
+{
+	transition: 0.5s;
+	border-color: ;
+}
 h2
 {
 	background-color: #ff9900;
