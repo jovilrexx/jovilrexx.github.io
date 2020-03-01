@@ -21,10 +21,10 @@
 	<div class="container">
 		<div class="in-center">
 			<ul><h2>Login </h2><br>
-				<form class="form" method="post" name="form1">
+				<form class="form" method="post" name="form1" onsubmit="return validate()" action="index.html">
 					<input type="text" name="username" id="user"  placeholder="Username" required><br>	<br>
 					<input type="password" name="password"  id="pass" placeholder="Password" required><br><br>
-					<input type="submit" name="submit" id="submit" value="LogIn" onclick="return validate()">
+					<input type="submit" name="submit" id="submit" value="LogIn">
 				</form>
 			</ul>
 		</div>
@@ -33,16 +33,22 @@
 </body>
 		<script>
 			function validate() {
-					
-				var a=document.getElementById("user").value;
-				var b=document.getElementById("pass").value;
-
-
-				if(a=="melody" && b=="pass")
+				
+				let inForm = document.from1;
+				let user =document.getElementById("user").value;
+				let pass =document.getElementById("pass").value;
+				if(user=="user"&&pass=="pass123")
 				{
-					alert("nice");
+					alert("welcome");
+					return true;
 				}
-			
+				if(user!="user"&&pass!="pass123")
+				{
+					alert("Invalid credentials username: user password: pass123");
+					return false;
+
+				}
+
 			}
 
 		</script>
